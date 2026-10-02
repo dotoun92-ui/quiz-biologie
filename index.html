@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Biologie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">🧬 Quiz Biologie</div>
+      </header>
+
+      <main>
+        <section id="start-screen" class="screen active">
+          <div class="card welcome-card">
+            <h1>Testez vos connaissances en biologie</h1>
+            <p>
+              50 questions variées sur la physiologie, la biochimie, la
+              microbiologie, l'immunologie et des situations pratiques.
+            </p>
+            <button id="start-btn" class="primary-btn">Commencer</button>
+          </div>
+        </section>
+
+        <section id="quiz-screen" class="screen">
+          <div class="card">
+            <div class="quiz-header">
+              <div class="progress-wrap">
+                <span id="progress-text">Question 1/50</span>
+                <div class="progress-bar">
+                  <div id="progress-fill"></div>
+                </div>
+              </div>
+              <div id="score-box" class="score-box">Score : 0</div>
+            </div>
+
+            <div id="category-badge" class="category-badge">Physiologie</div>
+            <h2 id="question-text">Question</h2>
+
+            <div id="answers" class="answers"></div>
+
+            <div id="feedback" class="feedback hidden">
+              <p id="feedback-text"></p>
+            </div>
+
+            <div class="nav-buttons">
+              <button id="prev-btn" class="secondary-btn">Retour</button>
+              <button id="next-btn" class="primary-btn">Suivant</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="result-screen" class="screen">
+          <div class="card result-card">
+            <h1>Quiz terminé !</h1>
+            <div class="result-score" id="final-score">0/50</div>
+            <p id="result-message">Excellent !</p>
+            <div class="result-actions">
+              <button id="restart-btn" class="primary-btn">Rejouer</button>
+              <button id="home-btn" class="secondary-btn">Accueil</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
